@@ -12,10 +12,9 @@ export default function RootLayout({ children }) {
         <nav>
           <Link href='/'>Home</Link> <br />
           <Link href='/about'>About</Link> <br />
-          <Link href='/tienda'>Tienda...
-          <Link href='/tienda/computadores'>Computadores</Link>
-          </Link> <br />
           <Link href='/posts'>Posts</Link> <br />
+          <br />
+          <Link href='/tienda'>Tienda</Link> <br />
         </nav>
         {children}
         </body>

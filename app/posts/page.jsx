@@ -2,11 +2,6 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 
-const metadata = {
-  title: "Pagina de Posts",
-  description: "Posts de usuarios con IDS",
-};
-
 function Posts() {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(false)

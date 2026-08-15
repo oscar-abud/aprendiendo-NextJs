@@ -1,9 +1,9 @@
 import React from 'react'
 
-function page() {
+function TiendaPage() {
   return (
-    <h1>page Tienda</h1>
+    <h1>TiendaPage</h1>
   )
 }
 
-export default page
+export default TiendaPage
