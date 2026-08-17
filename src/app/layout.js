@@ -1,7 +1,7 @@
-import Link from "next/link";
 import {
   Roboto
 } from "next/font/google"
+import { Nav } from "../components/Nav";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,15 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <nav>
-          <Link href='/'>Home</Link> <br />
-          <Link href='/about'>About</Link> <br />
-          <Link href='/posts'>Posts</Link> <br />
-          <Link href='/user'>Users</Link> <br />
-          <Link href='/todo'>Todos</Link> <br />
-          <br />
-          <Link href='/tienda'>Tienda</Link> <br />
-        </nav>
+        <Nav />
         {children}
         </body>
     </html>
