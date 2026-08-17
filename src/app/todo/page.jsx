@@ -1,4 +1,4 @@
-import Todos from '@/components/Todos'
+import Todos from '@/src/components/Todos'
 
 export const metadata = {
   title: "Page of todos",
