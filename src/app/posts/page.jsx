@@ -41,7 +41,7 @@ function Posts() {
           }
         } catch (error) {
           console.error("Ocurrio un error", error)
-          setError(err.message || "Error al cargar posts")
+          setError(error.message || "Error al cargar posts")
         } finally {
           setLoading(false)
         }
