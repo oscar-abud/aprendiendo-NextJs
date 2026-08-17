@@ -8,6 +8,7 @@ export const metadata = {
 const loadTodos = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos")
   const data = await res.json()
+  await new Promise((resolve) => setTimeout(resolve, 3000)) // 3000 = 3 segundos
   return data
 }
 
