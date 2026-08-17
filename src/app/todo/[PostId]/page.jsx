@@ -1,0 +1,21 @@
+import Todos from "@/src/components/Todos"
+
+const loadTodo = async (id) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+  const data = await res.json()
+  await new Promise((resolve) => setTimeout(resolve, 1000)) // 1000 = 1 segundos
+  return data
+}
+
+export default async function Page({ params }) {
+  const { PostId } = await params
+
+  const todo = await loadTodo(PostId)
+
+  return (
+    <div>
+      <h1>Todo</h1>
+      <Todos todos={todo} key={todo.id} />
+    </div>
+  )
+}

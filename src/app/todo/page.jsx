@@ -8,7 +8,7 @@ export const metadata = {
 const loadTodos = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos")
   const data = await res.json()
-  await new Promise((resolve) => setTimeout(resolve, 3000)) // 3000 = 3 segundos
+  await new Promise((resolve) => setTimeout(resolve, 1000)) // 1000 = 1 segundos
   return data
 }
 
@@ -20,7 +20,7 @@ async function Todo() {
       <h1>Todo List</h1>
       {
         todos.map(todo => (
-          <Todos todos={todo} key={todo.id} />
+          <Todos todos={todo} key={todo.id} buttonValue={true} />
         ))    
       }
     </div>
