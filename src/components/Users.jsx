@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-function Users() {
+function Users({users}) {
   useEffect(() => {
     alert("Funciona Users como cliente")
   }, [])
