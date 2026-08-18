@@ -1,12 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { useParams, useRouter } from "next/navigation"
+// import { useParams, useRouter } from "next/navigation"
 
 // CSR
 function Todos({ todos }) {
-  const params = useParams()
-  const router = useRouter()
+  // const params = useParams()
+  // const router = useRouter()
 
   return (
     <div
@@ -24,20 +24,18 @@ function Todos({ todos }) {
       <h3>user Id: {todos.userId} | {todos.title}</h3>
       <p>{todos.completed ? "Completado": "Por hacer"}</p>
 
-      {params.PostId && (
+      {/* {params.PostId && (
         <button onClick={() => router.back()}>Volver</button>
-      )}
+      )} */}
 
       <div
        style={{ display: 'flex', justifyContent: 'space-around' }}
       >
         <button onClick={() => alert("Saludando")}>Saludar</button>
 
-        {!params.PostId && (
-          <Link href={`/todo/${todos.id}`}>
-            <button>Ver todo</button>
-          </Link>
-        )}
+        <Link href={`/todo/${todos.id}`}>
+          <button>Ver todo</button>
+        </Link>
       </div>
     </div>
   )
