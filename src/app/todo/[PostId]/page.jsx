@@ -1,6 +1,6 @@
 import TodoPerUser from "@/src/components/TodoPerUser"
-import Todos from "@/src/components/Todos"
-import Users from "@/src/components/Users"
+import Todos from "@/src/app/todo/page"
+import { Suspense } from "react"
 
 const loadTodo = async (id) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
@@ -21,12 +21,17 @@ export default async function Page({ params }) {
   const todo = await loadTodo(PostId)
   const user = await loadUser(todo.userId)
 
-  console.log(user)
+  // console.log(user)
 
   return (
     <div>
       <h1>Todo</h1>
       <TodoPerUser todo={todo} user={user} key={todo.id} />
+      <hr />
+      <h3>Otros Todos</h3>
+      <Suspense fallback={<h2>Cargando...</h2>}>
+        <Todos />
+      </Suspense>
     </div>
   )
 }
