@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--blue-dark-color);
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.active {
+  text-decoration: underline solid 2px;
+}

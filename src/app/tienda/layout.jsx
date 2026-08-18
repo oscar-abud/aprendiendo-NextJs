@@ -17,11 +17,8 @@ function TiendaLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <br />
         Sub-Categorias
-        <header>
-          <Link href='/tienda/computadores'>Computadores</Link> <br />
-        </header>
+          <Link href='/tienda/computadores'>Computadores</Link>
         {children}
         </body>
     </html>

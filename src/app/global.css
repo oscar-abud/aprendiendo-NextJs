@@ -1,0 +1,27 @@
+:root {
+  --red-color: #d61719;
+  --white-color: #fff;
+  --blue-dark-color: #1e293b;
+  --dark-color: #1a1a1a;
+  --gray-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  font-size: 1.05rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--white-color);
+  text-decoration: none;
+}

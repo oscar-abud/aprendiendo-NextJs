@@ -1,4 +1,5 @@
 import Todos from '@/src/components/Todos'
+import "@/src/app/todo/todos.css"
 
 export const metadata = {
   title: "Page of todos",
@@ -18,11 +19,14 @@ async function Todo() {
   return (
     <div>
       <h1>Todo List</h1>
-      {
-        todos.map(todo => (
-          <Todos todos={todo} key={todo.id} />
-        ))    
-      }
+
+      <div className='todos'>
+        {
+          todos.map(todo => (
+            <Todos todos={todo} key={todo.id} />
+          ))    
+        }
+      </div>
     </div>
   )
 }
