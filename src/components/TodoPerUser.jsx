@@ -87,7 +87,7 @@ export default function TodoPerUser({ todo, user }) {
       >
         <button 
           style={{border: 'none 1px solid', cursor: 'pointer', borderRadius: '4px'}}
-          onClick={() => router.back()}
+          onClick={() => router.push('/todo')}
         >
           Volver
         </button>
