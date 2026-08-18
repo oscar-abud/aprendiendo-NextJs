@@ -20,7 +20,7 @@ async function Todo() {
       <h1>Todo List</h1>
       {
         todos.map(todo => (
-          <Todos todos={todo} key={todo.id} buttonValue={true} />
+          <Todos todos={todo} key={todo.id} />
         ))    
       }
     </div>
