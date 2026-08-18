@@ -4,7 +4,7 @@ function loading() {
   return (
     <div>
       <h1>Todo</h1>
-      <p>Cargando todo...</p>
+      <p>Cargando el todo...</p>
     </div>
   )
 }
